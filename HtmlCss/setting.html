@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+    <title>SkyNet</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">SkyNet</h1>
+      <nav>
+        <a href="index.html" class="nav-item"><span class="icon">⚙️</span> Instance</a>
+        <a href="setting.html" class="nav-item active"><span class="icon">⚙️</span> Setting</a>
+        <a href="manageur.html" class="nav-item"><span class="icon">👁️</span> Manageur</a>
+        <a href="player.html" class="nav-item"><span class="icon">👤</span> Player</a>
+        <div class="sub-text">Player and Team option</div>
+        <a href="status.html" class="nav-item"><span class="icon">▶️</span> Status</a>
+        <div class="sub-text">Status of the running task</div>
+      </nav>
+    </div>
+    <main class="main-content">
+      <div class="form-container">
+        <h1>SkyNet</h1>
+        <div class="form-group">
+            <label>serveur address</label>
+            <input type="text" id="serveur" placeholder="serveur address">
+        </div>
+        <button id="connection" class="launch-button">
+            <span class="icon"></span>
+            Connection
+        </button>
+    <script src="../setting.js"></script>
+  </body>
+</html>

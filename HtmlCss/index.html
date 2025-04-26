@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+    <title>SkyNet</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">SkyNet</h1>
+      <nav>
+        <a href="index.html" class="nav-item active"><span class="icon">⚙️</span> Instance</a>
+        <a href="setting.html" class="nav-item"><span class="icon">⚙️</span> Setting</a>
+        <a href="manageur.html" class="nav-item"><span class="icon">👁️</span> Manageur</a>
+        <a href="player.html" class="nav-item"><span class="icon">👤</span> Player</a>
+        <div class="sub-text">Player and Team option</div>
+        <a href="status.html" class="nav-item"><span class="icon">▶️</span> Status</a>
+        <div class="sub-text">Status of the running task</div>
+      </nav>
+    </div>
+    <main class="main-content">
+      <div class="form-container">
+        <h1>SkyNet</h1>
+        <div class="form-group">
+          <label>Custom user (optionnel)</label>
+          <input type="text" id="minecraft-username" placeholder="user name">
+        </div>
+        <div class="form-group">
+          <label>Nombre d'instances</label>
+          <div class="range-container">
+            <input type="range" id="slider" min="1" max="10" value="1" class="range">
+            <input type="number" id="manual-input" value="1" min="1" max="10" class="number-input">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Version</label>
+          <select id="instance-name">
+            <option>1.17.1</option>
+            <option>1.16.5</option>
+          </select>
+        </div>
+        <div class="form-group radio-group">
+          <div class="radio-option">
+            <input type="radio" id="creatif" name="mode">
+            <label for="creatif">Creatif</label>
+            <div class="sub-text">futur version</div>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="survie" name="mode">
+            <label for="survie">Survie</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button id="boutonMinecraft" class="launch-button">
+            <span class="icon">🚀</span>
+            Lancer les instances
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="../render.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "skynet",
+  "version": "1.0.0",
+  "description": "control pannel for bot minecraft",
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "ws": "^8.18.1"
+  }
+}

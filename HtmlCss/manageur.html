@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+    <title>SkyNet</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">SkyNet</h1>
+      <nav>
+        <a href="index.html" class="nav-item"><span class="icon">⚙️</span> Instance</a>
+        <a href="setting.html" class="nav-item"><span class="icon">⚙️</span> Setting</a>
+        <a href="manageur.html" class="nav-item active"><span class="icon">👁️</span> Manageur</a>
+        <a href="player.html" class="nav-item"><span class="icon">👤</span> Player</a>
+        <div class="sub-text">Player and Team option</div>
+        <a href="status.html" class="nav-item"><span class="icon">▶️</span> Status</a>
+        <div class="sub-text">Status of the running task</div>
+      </nav>
+    </div>
+    <main class="main-content">
+      <div class="form-container">
+        <h1>SkyNet</h1>
+        <div class="form-group">
+            <label for="search">Recherche</label>
+            <input type="text" id="search" placeholder="Rechercher..." onkeyup="filterTable()">
+        </div>
+        <div class="instances-list" style="max-height: 200px; overflow-y: auto;">
+            <table id="instancesTable" style="width: 100%;">
+                <tbody>
+                    <tr data-command=".toggle kill-aura">
+                        <td>Kill aura</td>
+                    </tr>
+                    <tr data-command=".toggle no-fall">
+                        <td>no fall</td>
+                    </tr>
+                    <tr data-command=".toggle velocity">
+                        <td>velocity</td>
+                    </tr>
+                    <tr data-command=".toggle fastbreak">
+                        <td>fastbreak</td>
+                    </tr>
+                    <tr data-command=".toggle auto-armor">
+                        <td>autoarmor</td>
+                    </tr>
+                    <tr data-command=".toggle autosword">
+                        <td>autosword</td>
+                    </tr>
+                    <tr data-command=".toggle criticals">
+                        <td>criticals</td>
+                    </tr>
+                    <tr data-command=".toggle auto-tool">
+                        <td>auto tool</td>
+                    </tr>
+                    <tr data-command=".toggle anti-hunger">
+                        <td>antihunger</td>
+                    </tr>
+                    <tr data-command=".toggle autoeat">
+                        <td>auto eat</td>
+                    </tr>
+                    <tr data-command=".toggle speed">
+                        <td>speed</td>
+                    </tr>
+                    <tr data-command=".toggle no-slow">
+                        <td>noSlow</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-group">
+            <label>commande meteor</label>
+            <input type="text" id="command" placeholder="command">
+        </div>
+        <button id="run" class="launch-button">
+            <span class="icon"></span>
+            Run
+        </button>
+    <script src="../manageur.js"></script>
+  </body>
+</html>

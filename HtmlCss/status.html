@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://www.gamergeeks.net;">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons-minecraft-205.css">
+    <title>SkyNet</title>
+    <style>
+      .minecraft-items {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Force l'adaptation des colonnes */
+      }
+      
+      .minecraft-items th, .minecraft-items td {
+        white-space: nowrap; /* Empêche le texte de passer à la ligne */
+        padding: 5px; /* Réduit l'espace intérieur pour optimiser la taille */
+        font-size: 14px; /* Réduit légèrement la taille de la police */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
+      }
+      
+      .items-container {
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .main-content {
+        overflow: hidden; /* Empêche tout débordement */
+      }
+      
+      .minecraft-items th:first-child,
+      .minecraft-items td:first-child {
+        width: 50px; /* Force une largeur réduite pour la colonne des icônes */
+      }
+      
+      .minecraft-items th:nth-child(2),
+      .minecraft-items td:nth-child(2) {
+        width: 100px; /* Limite la colonne ID */
+      }
+      
+      .minecraft-items th:nth-child(3),
+      .minecraft-items td:nth-child(3) {
+        width: auto; /* Laisse cette colonne s'adapter */
+      }
+      
+      .minecraft-items th:nth-child(4),
+      .minecraft-items td:nth-child(4) {
+        width: 120px; /* Force une largeur fixe pour la catégorie */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="logo">SkyNet</h1>
+      <nav>
+        <a href="index.html" class="nav-item"><span class="icon">⚙️</span> Instance</a>
+        <a href="setting.html" class="nav-item"><span class="icon">⚙️</span> Setting</a>
+        <a href="manageur.html" class="nav-item"><span class="icon">👁️</span> Manageur</a>
+        <a href="player.html" class="nav-item"><span class="icon">👤</span> Player</a>
+        <div class="sub-text">Player and Team option</div>
+        <a href="status.html" class="nav-item active"><span class="icon">▶️</span> Status</a>
+        <div class="sub-text">Status of the running task</div>
+      </nav>
+    </div>
+    <main class="main-content">
+      <div class="form-container">
+        <h1>SkyNet</h1>
+         
+        <div class="search-container">
+          <h2>Blocs a miner</h2>
+          <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un bloc ou item...">
+        </div>
+        
+        <div class="items-container">
+          <table class="minecraft-items" id="minecraftItems">
+            <thead>
+              <tr>
+                <th>Icône</th>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Catégorie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Les blocs seront ajoutés dynamiquement via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="selectedItems">
+          <h3>Items sélectionnés:</h3>
+          <div id="selectedItemsList" class="selected-items-container"></div>
+        </div>
+
+        <button id="minage" class="launch-button">
+          <span class="icon"></span>
+          Miner
+        </button>
+
+        <h2>Deplacement</h2>
+
+        <div class="form-group">
+            <label>x y z</label>
+            <input type="text" id="goto" placeholder="x y z">
+        </div>
+
+        <button id="go" class="launch-button">
+          <span class="icon"></span>
+          Go to
+        </button>
+        
+      </div>
+    </main>
+    <script src="../status.js"></script>
+  </body>
+</html>
