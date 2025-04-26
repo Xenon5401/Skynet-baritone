@@ -1,6 +1,6 @@
 # SkyNet
 
-SkyNet est un panneau de contrôle pour bots Minecraft, permettant de lancer, gérer et contrôler plusieurs instances Minecraft via une interface graphique moderne et un serveur WebSocket intégré. Merci d ètre indulgent ceci est mon premier gros projet avec electron.
+SkyNet est un panneau de contrôle pour bots Minecraft, permettant de lancer, gérer et contrôler plusieurs instances Minecraft via une interface graphique moderne et un serveur WebSocket intégré. Merci d'être indulgent, ceci est mon premier gros projet avec Electron.
 
 ## Fonctionnalités
 
