@@ -23,8 +23,30 @@ SkyNet est un panneau de contrôle pour bots Minecraft, permettant de lancer, g�
    ```bash
    npm install
    ```
+3. **Verification de l installation du projet**
+   
+   voici à quoi un ls ou dir du projet devrait ressembler
+   
+   ```
+   29/04/2025  08:35    <DIR>          asset
+   17/03/2025  07:00            67 324 Gui.png
+   29/04/2025  08:35    <DIR>          HtmlCss
+   23/03/2025  11:04             8 911 main.js
+   21/03/2025  13:24             1 498 manageur.js
+   29/04/2025  08:35    <DIR>          node_modules
+   26/04/2025  18:08            31 763 package-lock.json
+   26/04/2025  18:08               385 package.json
+   21/03/2025  20:01               636 player.js
+   18/03/2025  08:35             1 586 player.txt
+   26/04/2025  18:11             2 719 README.md
+   20/03/2025  22:57             3 534 render.js
+   21/03/2025  18:53               635 setting.js
+   22/03/2025  22:22            11 860 status.js
+   29/04/2025  09:12    <DIR>          UltimMC
+   20/03/2025  22:11             5 089 websocket.js
+   ```
 
-3. **Lancement de l'application** :
+5. **Lancement de l'application** :
    ```bash
    npm start
    ```
